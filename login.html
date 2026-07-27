@@ -87,6 +87,19 @@
       text-decoration: underline;
     }
   </style>
+  <script>
+    function login() {
+      const username = document.querySelector('input[type="text"]').value.trim();
+      const password = document.querySelector('input[type="password"]').value.trim();
+      
+      if (username === '' || password === '') {
+        alert('Username dan password harus diisi!');
+        return false;
+      }
+      
+      window.location.href = 'index.html';
+    }
+  </script>
 </head>
 <body>
 
@@ -103,7 +116,7 @@
         <input type="password" placeholder="Masukkan password" required>
       </div>
 
-      <button type="submit" class="login-btn"><a href="index.html">Login</a></button>
+      <button type="button" class="login-btn" onclick="login()">Login</button>
     </form>
 
     <div class="footer">
